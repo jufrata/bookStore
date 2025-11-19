@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar Livro - Pagamento via PIX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Livro Digital (PDF)</h1>
+    <p class="descricao">Receba imediatamente no seu e-mail após o pagamento via PIX.</p>
+
+    <div class="card">
+        <h2>R$ 29,90</h2>
+
+        <input id="email" type="email" placeholder="Seu e-mail" required>
+
+        <button onclick="gerarPagamento()">Gerar PIX</button>
+
+        <div id="pix-area" class="hidden">
+            <p>Escaneie o QR Code:</p>
+            <img id="qrCode" src="" alt="QR Code PIX">
+            <p>Código copia e cola:</p>
+            <textarea id="copiaCola" readonly></textarea>
+
+            <button onclick="confirmarPagamento()">Já paguei</button>
+        </div>
+
+        <p id="status"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
